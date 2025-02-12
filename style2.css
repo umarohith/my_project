@@ -48,40 +48,6 @@ header h1 {
     text-align: center;
 }
 
-.search-container {
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  .search-input {
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 25px;
-    border: none;
-    width: 250px;
-    margin-right: 10px;
-  }
-  
-  .search-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .search-button i {
-    font-size: 18px; /* Adjust size of the icon */
-  }
-  
-  .search-button:hover {
-    background-color: #45a049;
-  }
-  
-
-
 .button-container {
     display: flex;
     flex-wrap: wrap;
@@ -115,7 +81,15 @@ header h1 {
     text-align: center;
     
 }
-
+#Recommended {
+    display:grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap:20px;
+    padding: 20px;
+    text-align: center;
+    /* justify-content: center; */
+}
 /* #bestsellers{
     display: flex;
     flex-wrap: wrap;
@@ -183,7 +157,7 @@ footer ul li a:hover {
 .product-box:hover{
     cursor: pointer;
     
-    box-shadow: 0px 0px 30px rgb(117, 114, 114);
+    box-shadow: 0px 0px 30px rgb(139, 134, 134);
 }
 
 .navbar ul{
@@ -259,4 +233,58 @@ color: #0b0a0a;
     header h1{
         text-align:end;
     }
+}
+/* 10-2-25*/
+/* Cart Modal Styling */
+#cart-modal {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially off the screen */
+    width: 300px; /* Width of the cart (adjust this as needed) */
+    height: 100%; /* Full height */
+    background-color: #fff;
+    border-left: 2px solid #ccc;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease; /* Smooth sliding transition */
+    z-index: 9999; /* Ensure it appears above other elements */
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+/* When the modal is open */
+#cart-modal.open {
+    right: 0; /* Slide the cart in from the right */
+}
+
+/* Cart Link Styling */
+#cart-link {
+    cursor: pointer;
+    /* text-decoration: underline; */
+}
+
+/* Add a close button inside the cart */
+#close-cart {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+}
+
+/* Styling for the cart items */
+#cart-items li {
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+#cart-items li button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
