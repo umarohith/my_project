@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style2.css">
-
 </head>
 <body>
     <header>
@@ -19,39 +17,94 @@
     </header>
     <nav class="navbar">
         <ul>
-            <li><a href="#" >Cart</a></li>
+            <li><a href="#">Cart</a></li>
             <li><a href="#">Settings</a></li>
             <li><a href="garage2.html">Home</a></li>
-            
             <li><a href="#">Sign up</a></li>
             <li><a href="signin.html">Sign in</a></li>
         </ul>
     </nav>
-    <h1> two wheeler spare parts</h1>
+    <h1>Two-wheeler spare parts</h1>
     <label for="search-bar">Search:</label>
-    <input type="search" id="search-bar" placeholder="search for 2 wheeler parts">
-    <p class="vechile-container">here all two  vehicle parts are available</p>
+    <input type="search" id="search-bar" placeholder="Search for 2-wheeler parts">
+    <p class="vehicle-container">Here all two-wheeler vehicle parts are available</p>
     <section id="bestsellers">
         
-        <div class="product-box">
+        <div class="product-box" data-category="jack" data-name="ad">
            <img src="https://images.meesho.com/images/products/399723719/wioiu_1200.jpg" alt="">
            <h4>YWHWXB 46 Pieces Mechanic Tool Kit</h4>
            <p>₹470</p>
         </div>
-        <div class="product-box">
+        <div class="product-box" data-category="Tool" data-name="as">
             <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRCFANhwHYP-xFZeg9KoIg1IiMadIh2Pvw2yYAJ2IB4Gp2RKesHhsjhaxj665yAe2WiNiUkZ2_4lbVa0mKURzMKfAlig1kCQ-vmyhx3CEltyDPhwfhvRmc-cg" alt="Best tool">
-            <p>This is the best selling tool in the market.</p>
+            <p>as</p>
         </div>
-        <div class="product-box">
+        <div class="product-box" data-category="Tool" data-name="ag">
             <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRCFANhwHYP-xFZeg9KoIg1IiMadIh2Pvw2yYAJ2IB4Gp2RKesHhsjhaxj665yAe2WiNiUkZ2_4lbVa0mKURzMKfAlig1kCQ-vmyhx3CEltyDPhwfhvRmc-cg" alt="Best tool">
-            <p>This is the best selling tool in the market.</p>
+            <p>ag</p>
         </div>
-        <div class="product-box">
+        <div class="product-box" data-category="jack" data-name="aa">
             <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRCFANhwHYP-xFZeg9KoIg1IiMadIh2Pvw2yYAJ2IB4Gp2RKesHhsjhaxj665yAe2WiNiUkZ2_4lbVa0mKURzMKfAlig1kCQ-vmyhx3CEltyDPhwfhvRmc-cg" alt="Best tool">
-            <p>This is the best selling tool in the market.</p>
+            <p>aa</p>
         </div>
-        
-        <!-- More product boxes can be added similarly -->
+        <div class="product-box" data-category="tools" data-name="aa">
+            <img src="https://m.media-amazon.com/images/I/81G4lDiwHjL.jpg" alt="Hi-Spec 124piece Home & Garage Mechanics Tool Set">
+            <h5>Hi-Spec 124piece Home & Garage Mechanics Tool Set</h5>
+            <p class="product-price"></p>
+            <button class="cart-btn">add to cart</button>
+        </div>
+        <div class="product-box"data-category="jack" data-name="aa">
+            <img src="https://www.familyhandyman.com/wp-content/uploads/2021/03/19-Automotive-Tools-Every-Mechanic-Needs_FT_via-amazon.com_.jpg" alt="Best tool">
+            <p class="product-price">Heavy jack</p>
+            <button class="cart-btn">add to cart</button>
+        </div>
+        <div class="product-box" data-category="Lock for Cars" data-name="aa">
+            <img src="https://m.media-amazon.com/images/I/71DZ3ov8kLL._AC_UY327_FMwebp_QL65_.jpg" alt="7MM Fendor Clip Lock for Cars Pack of 100 PCS ">
+           <h5>7MM Fendor Clip Lock for Cars Pack of 100 PCS </h5>
+            <p class="product-price">₹350</p>
+            <button class="cart-btn">add to cart</button>
+        </div>
+        <div class="product-box" data-category="filter" data-name="aa">
+            <img src="https://m.media-amazon.com/images/I/71GLQKDOpVL.jpg" alt="Buy EOPOAYI 35mm Air Filter">
+           <h5>Buy EOPOAYI 35mm Air Filter</h5>
+            <p class="product-price">₹ 2,969</p>
+            <button class="cart-btn">add to cart</button>
+        </div>
     </section>
+
+    <script src="two.js"></script>
+
+    <script>
+        // JavaScript to filter the items based on input
+        const searchInput = document.getElementById('search-bar');
+        const productBoxes = document.querySelectorAll('.product-box');
+
+        // Function to filter and update visibility of the product boxes
+        function filterItems(input) {
+            const searchQuery = input.toLowerCase();
+
+            // Loop through all product boxes and filter based on category or name
+            productBoxes.forEach(box => {
+                const category = box.getAttribute('data-category').toLowerCase();
+                const name = box.getAttribute('data-name').toLowerCase();
+
+                // If category or name contains the search query, show the item, else hide it
+                if (category.includes(searchQuery) || name.includes(searchQuery)) {
+                    box.style.display = 'block'; // Show the item
+                } else {
+                    box.style.display = 'none'; // Hide the item
+                }
+            });
+        }
+
+        // Event listener for search input to trigger filtering
+        searchInput.addEventListener('input', (event) => {
+            const userInput = event.target.value;
+            filterItems(userInput);
+        });
+
+        // Optional: Initial filter to show all items when page loads
+        filterItems('');
+    </script>
 </body>
-</html>
+</h
