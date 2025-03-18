@@ -5,22 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Web Page</title>
     <link rel="stylesheet" href="style2.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=local_shipping" />
 </head>
 <body>
     <header>
         <div class="logo-container">
             <a href="garage2.html">
-                <img src="images/garagelogo.png" alt="Garage Logo" class="logo" id="logo1">
+                <img src="https://previews.123rf.com/images/vectorcarrot/vectorcarrot1801/vectorcarrot180100101/93799448-garage-service-station-car-repair-design-element-for-logo-label-emblem-sign-vector.jpg" alt="Garage Logo" class="logo" id="logo1">
             </a>
         </div>
         <h1>Online Garage</h1>
+        <form class="search-bar" action="/search" method="get">
+            <input type="text" name="query" placeholder="Search..." required>
+            <!-- Search Icon as a button -->
+            <button type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
     </header>
     <nav class="navbar">
         <ul>
-            <li><a href="#" id="cart-link">Cart (0)</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="garage2.html">Home</a></li>
-            <li><a href="form.html">Login</a></li>
+            <li><a href="#" id="cart-link"><img src="zCart.png" alt="Cart" height="20px">Cart (0)</a></li>
+            <li><a href="#"><img src="setting.png" alt="Setting" height="20px">Settings</a></li>
+            <li><a href="garage2.html"><img src="Home.png" alt="Home" height="20px">Home</a></li>
+            <li><a href="form.html"><img src="login.png" alt="User" height="20px">Login</a></li>
         </ul>
     </nav>
     <div id="cart-modal" class="cart-modal hidden">
@@ -31,20 +41,26 @@
         </div>
     </div>
     <div class="startingimg">
-    <h1>Indias Most trusted online shopping platform</h1>
-    <p>We have all the tools and spare parts for your needs with the best discounts for you</p>
+        <div class="imginimg">
+            <h1>Indias Most trusted online shopping platform</h1>
+            <p>We have all the tools and spare parts for your needs with the best discounts for you</p>
+        </div>
     </div>
     <div class="info">
         <div class="infobox">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ0tPPFhSO44omeHUgcwZHVoBNbPUZ1W8M3g&s" alt="Fast Delivery">
+            
+            <img src="image2.png" alt="fast-delivery" >
             <h2>Fast Delivery</h2>
             <p>Experience the ease of shopping with our all-India delivery service.</p>
         </div>
+        
         <div class="infobox">
+            <img src="image3.png" alt="secure-payment">
             <h2>Secure Payment</h2>
             <p>Experience worry-free transactions with our secure payment options.</p>
         </div>
         <div class="infobox">
+            <img src="image4.png" alt="online-support">
             <h2>Online Support</h2>
             <p>Get 24/7 online assistance for all your queries and concerns.</p>
         </div>
