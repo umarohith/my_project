@@ -1,183 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Web Page</title>
-    <link rel="stylesheet" href="style2.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=local_shipping" />
-</head>
-<body>
-    <header>
-        <div class="logo-container">
-            <a href="garage2.html">
-                <img src="https://previews.123rf.com/images/vectorcarrot/vectorcarrot1801/vectorcarrot180100101/93799448-garage-service-station-car-repair-design-element-for-logo-label-emblem-sign-vector.jpg" alt="Garage Logo" class="logo" id="logo1">
-            </a>
-        </div>
-        <h1>Online Garage</h1>
-        <form class="search-bar" action="/search" method="get">
-            <input type="text" name="query" placeholder="Search..." required>
-            <!-- Search Icon as a button -->
-            <button type="submit">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
-    </header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#" id="cart-link"><img src="zCart.png" alt="Cart" height="20px">Cart (0)</a></li>
-            <li><a href="#"><img src="setting.png" alt="Setting" height="20px">Settings</a></li>
-            <li><a href="garage2.html"><img src="Home.png" alt="Home" height="20px">Home</a></li>
-            <li><a href="form.html"><img src="login.png" alt="User" height="20px">Login</a></li>
-        </ul>
-    </nav>
-    <div id="cart-modal" class="cart-modal hidden">
-        <div class="cart-content">
-            <span id="close-cart">&times;</span>
-            <h2>Your Cart</h2>
-            <ul id="cart-items"></ul>
-        </div>
-    </div>
-    <div class="startingimg">
-        <div class="imginimg">
-            <h1>Indias Most trusted online shopping platform</h1>
-            <p>We have all the tools and spare parts for your needs with the best discounts for you</p>
-        </div>
-    </div>
-    <div class="info">
-        <div class="infobox">
-            
-            <img src="image2.png" alt="fast-delivery" >
-            <h2>Fast Delivery</h2>
-            <p>Experience the ease of shopping with our all-India delivery service.</p>
-        </div>
-        
-        <div class="infobox">
-            <img src="image3.png" alt="secure-payment">
-            <h2>Secure Payment</h2>
-            <p>Experience worry-free transactions with our secure payment options.</p>
-        </div>
-        <div class="infobox">
-            <img src="image4.png" alt="online-support">
-            <h2>Online Support</h2>
-            <p>Get 24/7 online assistance for all your queries and concerns.</p>
-        </div>
-    </div>
+// Get references to cart elements
+const cartModal = document.getElementById("cart-modal");
+const cartItemsContainer = document.getElementById("cart-items");
+const cartLink = document.getElementById("cart-link");
+const closeCartBtn = document.getElementById("close-cart");
 
-    <section class="vehicle-section">
-        <h2>Type of Wheelers</h2>
-        <div class="button-container">
-            <a target="_blank" href="two.html">
-                <button class="vehicle-button">2 Wheeler</button>
-            </a>
-            <a target="_blank" href="three.html">
-                <button class="vehicle-button">3 Wheeler</button>
-            </a>
-            <a target="_blank" href="four.html">
-                <button class="vehicle-button">4 Wheeler</button>
-            </a>
-            <a target="_blank" href="#">
-                <button class="vehicle-button">6 Wheeler</button>
-            </a>
-            <a target="_blank" href="#">
-                <button class="vehicle-button">8 Wheeler</button>
-            </a>
-        </div>
-    </section>
-    <h2>Our Collections</h2>
-        <hr>
-    <section id="bestsellers">
-        
-        <div class="product-box">
-            <img src="https://images.meesho.com/images/products/399723719/wioiu_1200.jpg" alt="">
-            <h5>YWHWXB 46 Pieces Mechanic</h5>
-            <p class="product-price">₹470</p>
-            <button class="cart-btn">add to cart</button>
-         </div>
-        <div class="product-box">
-            <img src="https://m.media-amazon.com/images/I/712G-NSjdXL.jpg" alt="Ingco Impact Wrench, 2300rpm">
-            <h5>Ingco Impact Wrench, 2300rpm</h5>
-            <p class="product-price">₹6,199</p>
-            <button class="cart-btn">add to cart</button>
-        </div>
-        <div class="product-box">
-            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/vehicle-tool-kit/q/o/r/2-38-2-ton-jack-scissor-lift-max-2-ton-load-capacity-with-jack-original-imah8ez9kruzzb5s.jpeg?q=70" alt="Kruvad 2 Ton Jack Scissor Lift Max 2 Ton Load Capacity with Jack Socket Vehicle Tool Kit">
-            <h5>Kruvad 2 Ton Jack Scissor Lift</h5>
-            <p class="product-price">₹1,318</p>
-            <button class="cart-btn">add to cart</button>
-        </div>
-        <div class="product-box">
-        <img src="https://cdn.moglix.com/p/5b9K9nqBReLMh-large.jpg" alt="Windek 4001 Heavy Duty Tyre Inflator">            
-        <h5>Windek 4001 Heavy Duty Tyre Inflator</h5>
-        <p class="product-price">₹2,117</p>
-        <button class="cart-btn">add to cart</button>
-        </div>
-        <div class="product-box">
-            <img src="https://cdn.moglix.com/p/5b9K9nqBReLMh-large.jpg" alt="Windek 4001 Heavy Duty Tyre Inflator">            
-            <h5>Windek 4001 Heavy Duty Tyre Inflator</h5>
-            <p class="product-price">₹2,117</p>
-            <button class="cart-btn">add to cart</button>
-            </div>
-        <div class="product-box">
-        <img src="https://cdn.moglix.com/p/Ci4P15CrazefU-large.jpg" alt="">
-        <h5>Btali BT 1050 HPW 1900W 160bar High Pressure Washer</h5>
-        <p class="product-price">₹5,295 <sub style="font-size: 0.7em;">+₹954 GST</sub></p>
-        <button class="cart-btn">add to cart</button>
-        </div>
-        
-        
-        <!-- More product boxes can be added similarly -->
-    </section>
-    <h2>Best Sellers</h2>
-    <hr>
-    <section id="Recommended">
-        
-        <div class="product-box">
-            <img src="https://m.media-amazon.com/images/I/81G4lDiwHjL.jpg" alt="Hi-Spec 124piece Home & Garage Mechanics Tool Set">
-            <h5>Hi-Spec 124piece Home & Garage Mechanics Tool Set</h5>
-            <p class="product-price"></p>
-            <button class="cart-btn">Add to cart</button>
-        </div>
-        
-        <div class="product-box">
-            <img src="https://www.familyhandyman.com/wp-content/uploads/2021/03/19-Automotive-Tools-Every-Mechanic-Needs_FT_via-amazon.com_.jpg" alt="Best tool">
-            <p class="product-price">Heavy jack</p>
-            <button class="cart-btn">add to cart</button>
-        </div>
-        <div class="product-box">
-           <div class="prod">
-            <img src="https://m.media-amazon.com/images/I/71DZ3ov8kLL._AC_UY327_FMwebp_QL65_.jpg" alt="7MM Fendor Clip Lock for Cars Pack of 100 PCS ">
-           </div> 
-           <h5>7MM Fendor Clip Lock for Cars Pack of 100 PCS </h5>
-            <p class="product-price">₹350</p>
-            <button class="cart-btn">add to cart</button>
-        </div>
-        <div class="product-box">
-            <img src="https://m.media-amazon.com/images/I/71GLQKDOpVL.jpg" alt="Buy EOPOAYI 35mm Air Filter">
-           <h5>Buy EOPOAYI 35mm Air Filter</h5>
-            <p class="product-price">₹ 2,969</p>
-            <button class="cart-btn">add to cart</button>
-        </div>
-        
-        <!-- More product boxes can be added similarly -->
-    </section>
+// Cart array to store items
+let cart = [];
 
-    <section class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-    </section>
-    <script src="garage3.js"></script>
-    <footer>
-        <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Email</a></li>
-            <li><a href="#">Feedback</a></li>
-        </ul>
-    </footer>
-</body>
-</html>
+// Open cart function
+cartLink.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default link behavior
+    cartModal.classList.add("show-cart"); // Add class to make it visible
+});
+
+// Close cart function
+closeCartBtn.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent bubbling issue
+    cartModal.classList.remove("show-cart");
+});
+
+// Function to add items to cart
+function addToCart(productName, productPrice, productImage) {
+    let existingItem = cart.find(item => item.name === productName);
+    
+    if (existingItem) {
+        existingItem.quantity += 1; // Increase quantity for duplicate items
+    } else {
+        cart.push({
+            name: productName,
+            price: productPrice,
+            image: productImage,
+            quantity: 1
+        });
+    }
+
+    updateCartUI();
+}
+
+// Function to remove items from cart (without closing)
+function removeFromCart(index) {
+    if (cart[index].quantity > 1) {
+        cart[index].quantity -= 1; // Reduce quantity
+    } else {
+        cart.splice(index, 1); // Remove item when quantity is 0
+    }
+
+    updateCartUI();
+}
+
+// Function to update the cart UI
+function updateCartUI() {
+    cartItemsContainer.innerHTML = ""; // Clear existing items
+
+    cart.forEach((item, index) => {
+        const cartItem = document.createElement("li");
+        cartItem.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" width="50" height="50">
+            <span>${item.name} - ₹${item.price} x ${item.quantity}</span>
+            <button onclick="removeFromCart(${index})">Remove</button>
+        `;
+        cartItemsContainer.appendChild(cartItem);
+    });
+
+    cartModal.classList.add("show-cart"); // Ensure cart stays open after update
+    cartLink.innerText = `Cart (${cart.reduce((sum, item) => sum + item.quantity, 0)})`; // Update cart count
+}
+
+// Attach event listeners to all "Add to Cart" buttons
+document.querySelectorAll(".product-box button").forEach((button, index) => {
+    button.addEventListener("click", () => {
+        const productBox = button.parentElement;
+        const productName = productBox.querySelector("h5").innerText;
+        const productPrice = productBox.querySelector(".product-price")?.innerText.replace("₹", "") || "0";
+        const productImage = productBox.querySelector("img").src;
+
+        addToCart(productName, productPrice, productImage);
+    });
+});
