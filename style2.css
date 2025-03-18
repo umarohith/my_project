@@ -34,13 +34,50 @@ header .logo-container {
 }
 #logo1{
     height: 13vh;
+    width : 13vh;
     border-radius: 100px;
+    margin-top : 20px;
+    margin:20px;
 }
 
 header h1 {
     margin: 0;
 }
+.search-bar {
+    margin : 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.search-bar input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 5px;
+    width : 30vb;
+}
+
+.search-bar button {
+    padding: 5px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar button i {
+    font-size: 18px;
+}
+
+.search-bar button:hover {
+    background-color: #888;
+}
 /* Section Styling */
 .vehicle-section {
     margin-top: 100px;
@@ -172,10 +209,10 @@ header h1 {
 }
 
 /* Click effect on image */
+
 .product-box img:active {
     transform: scale(1.15); /* Slightly larger when clicked */
 }
-
 
 /* Content Section */
 .content {
@@ -237,19 +274,73 @@ footer ul li a:hover {
 }
 .info .infobox{
     width: 400px;
-    height: 200px;
+    height: 220px;
     text-align: center;
     background-color:rgba(126, 68, 68, 0);
     margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px grey;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px grey;
     border: 1px solid rgb(236, 236, 240);
     /* box-shadow: 0px 0px  4px black; */
     /* margin: 3px; */
 }
+.info .infobox .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.startingimg{
+    background-image:url(https://t4.ftcdn.net/jpg/07/72/71/99/360_F_772719965_KQmmd3IPSP4lCQFchIETA1Pjt1apvbAv.jpg);
+    height:60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+    width: 100vw;
+    height: 60vh;
+}
+.startingimg .imginimg{
+    position: relative;
+    backdrop-filter: blur(10px);
+    /* margin: 20px; */
+    margin: auto;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 650px;
+    top: 140px;
+    height:60%;
+    border : 1px solid grey;
+}
+.startingimg .imginimg h1{
+    color:white;
+    text-align:center;
+    position: sticky;
+    /* box-shadow: 0px 0px  15px rgb(129, 128, 128); */
+    border-radius: 30px;
+    font-size:2.5em;
+    justify-content:center ;
+}
+.startingimg .imginimg p{
+    color:rgb(255, 255, 255);
+    text-align:center;
+    border-radius: 30px;
+    position: sticky;
+    
+    /* box-shadow: 0px 0px  15px grey; */
+    font-size:1.3em;
+    padding: 10px;
+    /* position: absolute; */
+}
+.info .infobox:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgb(139, 134, 134);
+    transition :0.5s;
+}
 .info .infobox img{
-    width: 150px;
-    height:100px;
+    width: 80px;
+    height:80px;
 }
 .info{
     display: flex;
@@ -262,23 +353,16 @@ footer ul li a:hover {
 /* .info .infobox p{
 color: #0b0a0a;
 } */
- .startingimg{
-    background-image:url(https://t4.ftcdn.net/jpg/07/72/71/99/360_F_772719965_KQmmd3IPSP4lCQFchIETA1Pjt1apvbAv.jpg);
-    height:50vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 .startingimg h1{
     color:white;
-    text-align:end;
-    box-shadow: 0px 0px  15px rgb(129, 128, 128);
+    text-align:center;
     font-size:3em;
 }
 .startingimg p{
     color:rgb(33, 177, 81);
-    text-align:left;
-    box-shadow: 0px 0px  15px grey;
+    text-align:center;
+    
     font-size:2em;
     /* position: absolute; */
 }
@@ -291,6 +375,7 @@ color: #0b0a0a;
         text-align:end;
     }
 }
+
 /* 10-2-25*/
 /* Cart Modal Styling */
 #cart-modal {
