@@ -284,6 +284,23 @@ footer ul li a:hover {
     /* box-shadow: 0px 0px  4px black; */
     /* margin: 3px; */
 }
+.info .infobox:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgb(139, 134, 134);
+    transition :0.5s;
+}
+.info .infobox img{
+    width: 80px;
+    height:80px;
+}
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 10px; */
+    
+    flex-direction: row;
+    justify-content: center;
+}
 .info .infobox .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -333,23 +350,7 @@ footer ul li a:hover {
     padding: 10px;
     /* position: absolute; */
 }
-.info .infobox:hover {
-    cursor: pointer;
-    box-shadow: 0px 0px 30px rgb(139, 134, 134);
-    transition :0.5s;
-}
-.info .infobox img{
-    width: 80px;
-    height:80px;
-}
-.info{
-    display: flex;
-    flex-wrap: wrap;
-    /* margin: 10px; */
-    
-    flex-direction: row;
-    justify-content: center;
-}
+
 /* .info .infobox p{
 color: #0b0a0a;
 } */
