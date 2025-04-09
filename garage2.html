@@ -17,15 +17,13 @@
             </a>
         </div>
         <h1>Online Garage</h1>
-        <form class="search-bar" id="search-bar" action="/search" method="get">
+        <form class="search-bar" action="/search" method="get">
             <input type="text" name="query" placeholder="Search..." required>
             <!-- Search Icon as a button -->
             <button type="submit">
                 <i class="fas fa-search"></i>
             </button>
         </form>
-
-        
     </header>
     <nav class="navbar">
         <div id="cart-modal" class="cart-modal">
@@ -40,6 +38,7 @@
             <li><a href="#" id="cart-link"><img src="images/zCart.png" alt="Cart" height="20px">Cart (0)</a></li>
             <li><a href="#"><img src="images/setting.png" alt="Setting" height="20px">Settings</a></li>
             <li><a href="garage2.html"><img src="images/Home.png" alt="Home" height="20px">Home</a></li>
+            <li><a href="product.html"><img src="images/sellproduct.png" alt="sellproduct" height="20px">Sell</a></li>
             <li><a href="form.html"><img src="images/login.png" alt="User" height="20px">Login</a></li>
         </ul>
     </nav>
@@ -100,74 +99,43 @@
         <hr>
     <section id="bestsellers">
         
-        <div class="product-box" data-category="tool set" data-name="tool set">
+        <div class="product-box">
             <img src="https://images.meesho.com/images/products/399723719/wioiu_1200.jpg" alt="">
             <h5>YWHWXB 46 Pieces Mechanic</h5>
             <p class="product-price">₹470</p>
             <button class="cart-btn">add to cart</button>
          </div>
-        <div class="product-box" data-category="Wrench" data-name="Wrench">
+        <div class="product-box">
             <img src="https://m.media-amazon.com/images/I/712G-NSjdXL.jpg" alt="Ingco Impact Wrench, 2300rpm">
             <h5>Ingco Impact Wrench, 2300rpm</h5>
             <p class="product-price">₹6,199</p>
             <button class="cart-btn">add to cart</button>
         </div>
-        <div class="product-box" data-category="jack" data-name="jack">
+        <div class="product-box">
             <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/vehicle-tool-kit/q/o/r/2-38-2-ton-jack-scissor-lift-max-2-ton-load-capacity-with-jack-original-imah8ez9kruzzb5s.jpeg?q=70" alt="Kruvad 2 Ton Jack Scissor Lift Max 2 Ton Load Capacity with Jack Socket Vehicle Tool Kit">
             <h5>Kruvad 2 Ton Jack Scissor Lift</h5>
             <p class="product-price">₹1,318</p>
             <button class="cart-btn">add to cart</button>
         </div>
-        <div class="product-box" data-category="inflator" data-name="inflator">
+        <div class="product-box">
         <img src="https://cdn.moglix.com/p/5b9K9nqBReLMh-large.jpg" alt="Windek 4001 Heavy Duty Tyre Inflator">            
         <h5>Windek 4001 Heavy Duty Tyre Inflator</h5>
         <p class="product-price">₹2,117</p>
         <button class="cart-btn">add to cart</button>
         </div>
-        <div class="product-box" data-category="inflator" data-name="inflator">
+        <div class="product-box">
             <img src="https://cdn.moglix.com/p/5b9K9nqBReLMh-large.jpg" alt="Windek 4001 Heavy Duty Tyre Inflator">            
             <h5>Windek 4001 Heavy Duty Tyre Inflator</h5>
-            <p  class="product-price">₹2,117</p>
+            <p>₹2,117</p>
             <button class="cart-btn">add to cart</button>
             </div>
-        <div class="product-box" data-category="washer" data-name="washer">
+        <div class="product-box">
         <img src="https://cdn.moglix.com/p/Ci4P15CrazefU-large.jpg" alt="">
         <h5>Btali BT 1050 HPW 1900W 160bar High Pressure Washer</h5>
         <p class="product-price">₹5,295</p>
         <button class="cart-btn">add to cart</button>
         </div>
-       
         
-            <!-- <div class="product-box" data-category="jack" data-name="ad">
-               <img src="https://images.meesho.com/images/products/399723719/wioiu_1200.jpg" alt="">
-               <h5>YWHWXB 46 Pieces Mechanic Tool Kit</h5>
-               <p class="product-price">₹470</p>
-               <button class="cart-btn">add to cart</button>
-            </div>
-            <div class="product-box" data-category="tools" data-name="aa">
-                <img src="https://m.media-amazon.com/images/I/81G4lDiwHjL.jpg" alt="Hi-Spec 124piece Home & Garage Mechanics Tool Set">
-                <h5>Hi-Spec 124piece Home & Garage Mechanics Tool Set</h5>
-                <p class="product-price">₹470</p>
-                <button class="cart-btn">add to cart</button>
-            </div>
-            <div class="product-box"data-category="jack" data-name="aa">
-                <img src="https://www.familyhandyman.com/wp-content/uploads/2021/03/19-Automotive-Tools-Every-Mechanic-Needs_FT_via-amazon.com_.jpg" alt="Best tool">
-                <p class="product-price">Heavy jack</p>
-                <button class="cart-btn">add to cart</button>
-            </div>
-            <div class="product-box" data-category="Lock for Cars" data-name="aa">
-                <img src="https://m.media-amazon.com/images/I/71DZ3ov8kLL._AC_UY327_FMwebp_QL65_.jpg" alt="7MM Fendor Clip Lock for Cars Pack of 100 PCS ">
-               <h5>7MM Fendor Clip Lock for Cars Pack of 100 PCS </h5>
-                <p class="product-price">₹350</p>
-                <button class="cart-btn">add to cart</button>
-            </div>
-            <div class="product-box" data-category="filter" data-name="aa">
-                <img src="https://m.media-amazon.com/images/I/71GLQKDOpVL.jpg" alt="Buy EOPOAYI 35mm Air Filter">
-               <h5>Buy EOPOAYI 35mm Air Filter</h5>
-                <p class="product-price">₹ 2,969</p>
-                <button class="cart-btn">add to cart</button>
-            </div> -->
-    
         
         <!-- More product boxes can be added similarly -->
     </section>
