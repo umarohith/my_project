@@ -4,8 +4,8 @@ const cartItemsContainer = document.getElementById("cart-items");
 const cartLink = document.getElementById("cart-link");
 const closeCartBtn = document.getElementById("close-cart");
 
-// Cart array to store items
-let cart = [];
+// Load cart from local storage or initialize an empty cart
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // Open cart function
 cartLink.addEventListener("click", (event) => {
@@ -17,6 +17,11 @@ cartLink.addEventListener("click", (event) => {
 closeCartBtn.addEventListener("click", () => {
     cartModal.classList.remove("show-cart");
 });
+
+// Function to save cart to local storage
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
 
 // Function to add items to cart
 function addToCart(productName, productPrice, productImage) {
@@ -33,6 +38,7 @@ function addToCart(productName, productPrice, productImage) {
         });
     }
 
+    saveCart(); // Save cart to local storage
     updateCartUI();
 }
 
@@ -44,6 +50,7 @@ function removeFromCart(index) {
         cart.splice(index, 1);
     }
 
+    saveCart(); // Save cart to local storage
     updateCartUI();
 }
 
@@ -87,3 +94,6 @@ document.querySelectorAll(".product-box button").forEach((button) => {
         addToCart(productName, productPrice, productImage);
     });
 });
+
+// Load the cart UI on page load
+updateCartUI();
