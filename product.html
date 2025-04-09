@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='sellproduct.css' rel='stylesheet'>
+    <title>Sign Up & Add Products</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="#" method="POST" enctype="multipart/form-data" id="mainForm">
+         <h1>Sell Your Product</h1>   
+            <!-- Product Information Section -->
+            <div class="form-section">
+                <h2>Add Your Product/Item</h2>
+                
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" name="productName" placeholder="Enter product name" required>
+                
+                <label for="productCategory">Category</label>
+                <select id="productCategory" name="productCategory" required>
+                    <option value="">Select a category</option>
+                    <option value="tools">Tools</option>
+                    <option value="engine_parts">Engine Parts</option>
+                    <option value="electrical">Electrical Components</option>
+                    <option value="body_parts">Body Parts</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="productPrice">Price ($)</label>
+                <input type="number" id="productPrice" name="productPrice" min="0" step="0.01" placeholder="0.00" required>
+                
+                <label for="productQuantity">Quantity Available</label>
+                <input type="number" id="productQuantity" name="productQuantity" min="0" placeholder="0" required>
+                
+                <label for="productDescription">Description</label>
+                <textarea id="productDescription" name="productDescription" rows="3" placeholder="Enter product description"></textarea>
+                
+                <label for="productImage">Upload Product Image</label>
+                <input type="file" id="productImage" name="productImage" accept="image/*" required>
+                <img id="imagePreview" class="image-preview" alt="Product image preview">
+            </div>
+            
+            <button type="submit">Add Product</button>
+            <button type="reset">Reset Form</button>
+        </form>
+    </div>
+
+    <script>
+        // Image preview functionality
+        document.getElementById('productImage').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById('imagePreview');
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Form submission handling
+        document.getElementById('mainForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Here you would typically send the data to your server
+            // For now, we'll just log it to the console
+            const formData = new FormData(this);
+            const formObject = {};
+            
+            formData.forEach((value, key) => {
+                formObject[key] = value;
+            });
+            
+            console.log('Form data:', formObject);
+            
+            // In a real application, you would send this to your backend:
+            // fetch('/api/register', {
+            //     method: 'POST',
+            //     body: formData
+            // })
+            // .then(response => response.json())
+            // .then(data => {
+            //     console.log('Success:', data);
+            //     alert('Registration successful!');
+            // })
+            // .catch(error => {
+            //     console.error('Error:', error);
+            //     alert('Registration failed. Please try again.');
+            // });
+            
+            alert('Form submitted! Check console for data.');
+        });
+    </script>
+</body>
+</html>
