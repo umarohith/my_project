@@ -450,7 +450,12 @@ button:hover {
     height: 150px;
     object-fit: cover;
     border-radius: 5px;
+    transition: transform 0.3s ease;
 }
+.product-box img:hover {
+    transform: scale(1.15);
+}
+
 
 .product-box:hover {
     transform: translateY(-5px);
