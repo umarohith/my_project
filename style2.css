@@ -43,6 +43,11 @@ header .logo-container {
 header h1 {
     margin: 0;
 }
+
+h2{
+    
+    text-align: center;
+}
 .search-bar {
     margin : 20px;
     display: flex;
