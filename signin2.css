@@ -85,3 +85,19 @@ body {
     border: 2px solid rgb(226, 230, 233);
     background: #27ae60;
 }
+#cart-footer {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    text-align: right;
+}
+
+#order-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
